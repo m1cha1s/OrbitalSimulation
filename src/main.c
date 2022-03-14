@@ -8,7 +8,7 @@
 
 int main() {
 
-    Rocket rkt = {{5, 5}, {-3, 0}, {0, 0}, 1};
+    Rocket rkt = {{0, 3}, {-5, 0}, {0, 0}, 1};
 
     InitWindow(W, H, "Orbital simulation");
 

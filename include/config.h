@@ -4,11 +4,13 @@
 #define W 500
 #define H 500
 
-#define DT 0.1
+#define FPS 60.0f
+
+#define DT (1.0f/FPS)*1.0f
 
 #define g 9.81
 
-#define EarthX 1
-#define EarthY 1
+#define EarthX 0
+#define EarthY 0
 
 #endif
