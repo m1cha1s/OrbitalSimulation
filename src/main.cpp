@@ -8,7 +8,7 @@
 
 int main() {
 
-    Rocket rkt = {{0, 3}, {-5, 0}, {0, 0}, 1};
+    Rocket rkt(0, 3, -5, 0, 0, 0);
 
     InitWindow(W, H, "Orbital simulation");
 
@@ -16,14 +16,14 @@ int main() {
 
     while(!WindowShouldClose()) {
 
-        UpdateRocket(&rkt);
+        rkt.updateRocket();
 
         BeginDrawing();
 
         ClearBackground(BLACK);
 
         DrawCircle(getAbsoluteX(EarthX), getAbsoluteY(EarthY), 50, WHITE);
-        DrawRocket(rkt);
+        rkt.drawRocket();
 
         EndDrawing();
     }

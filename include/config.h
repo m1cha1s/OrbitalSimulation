@@ -8,7 +8,7 @@
 
 #define DT (1.0f/FPS)*1.0f
 
-#define g 9.81
+#define g 9.81f
 
 #define EarthX 0
 #define EarthY 0

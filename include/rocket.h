@@ -3,19 +3,24 @@
 
 #include <raylib.h>
 
-typedef struct Rocket {
-    Vector2 pos, vel, acc;
-    float mass;
-}Rocket;
-
 int getAbsoluteX(float x);
 int getAbsoluteY(float y);
 
-float getAlpha(Vector2 pos);
-Vector2 getGravityVector(Vector2 pos);
+class Rocket
+{
+public:
+    Vector2 pos, vel, acc;
+    float mass;
+
+    Rocket(float x , float y, float vx, float vy, float ax, float ay);
+    ~Rocket();
+
+    float getAlpha();
+    Vector2 getGravityVector();
 
 
-void DrawRocket(Rocket rkt);
-void UpdateRocket(Rocket *rkt);
+    void drawRocket();
+    void updateRocket();
+};
 
 #endif

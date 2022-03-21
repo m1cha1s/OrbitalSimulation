@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 project(orbitalSimulation)
-
+    
 set(CMAKE_C_STANDARD 11)
 
 message("Downloading raylib. This may tak a while...")
@@ -12,7 +12,7 @@ set(BUILD_GAMES    OFF CACHE BOOL "" FORCE) # don't build the supplied example g
 FetchContent_Declare(raylib GIT_REPOSITORY https://github.com/raysan5/raylib.git GIT_TAG master)
 FetchContent_MakeAvailable(raylib)
 
-file(GLOB sources ${CMAKE_CURRENT_LIST_DIR}/src/*.c)
+file(GLOB sources ${CMAKE_CURRENT_LIST_DIR}/src/*.c*)
 add_executable(${PROJECT_NAME} ${sources})
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/include/)
